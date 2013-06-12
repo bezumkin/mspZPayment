@@ -27,6 +27,13 @@ class ZPayment extends msPaymentHandler implements msPaymentInterface {
 
 	/* @inheritdoc} */
 	public function send(msOrder $order) {
+		$link = $this->getPaymentLink($order);
+
+		return $this->success('', array('redirect' => $link));
+	}
+
+
+	public function getPaymentLink(msOrder $order) {
 		$id = $order->get('id');
 		$sum = number_format($order->get('cost'), 2, '.', '');
 		$request = array(
@@ -41,8 +48,9 @@ class ZPayment extends msPaymentHandler implements msPaymentInterface {
 		if (!empty($this->config['shopSign'])) {
 			$request['ZP_SIGN'] = md5($this->config['shopId'] . $id . $sum . $this->config['shopSign']);
 		}
+		$link = $this->config['checkoutUrl'] .'?'. http_build_query($request);
 
-		return $this->success('', array('redirect' => $this->config['checkoutUrl'] .'?'. http_build_query($request)));
+		return $link;
 	}
 
 

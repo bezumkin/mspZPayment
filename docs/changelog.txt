@@ -1,5 +1,9 @@
 Changelog for mspZPayment.
 
+1.0.0 pl
+==============
+- Added method getPaymentLink(msOrder $order); for placeholder [[+payment_link]] in MS2 letters.
+
 1.0.0 beta
 ==============
 - Initial release.
