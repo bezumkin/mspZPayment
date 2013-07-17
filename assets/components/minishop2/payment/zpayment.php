@@ -16,7 +16,7 @@ $params = array();
 
 /* @var msPaymentInterface|ZPayment $handler */
 $handler = new ZPayment($modx->newObject('msOrder'));
-if (!empty($_REQUEST['LMI_PAYEE_PURSE']) && !empty($_REQUEST['LMI_PAYMENT_NO'])) {
+if (!empty($_REQUEST['LMI_PAYEE_PURSE']) && !empty($_REQUEST['LMI_PAYMENT_NO']) && !empty($_REQUEST['LMI_HASH'])) {
 	if ($_REQUEST['LMI_PAYEE_PURSE'] != $handler->config['shopId']) {
 		$handler->paymentError('Invalid shop Id '.$_REQUEST['LMI_PAYEE_PURSE'], $_REQUEST);
 	}

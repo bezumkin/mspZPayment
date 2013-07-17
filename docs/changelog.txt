@@ -1,5 +1,9 @@
 Changelog for mspZPayment.
 
+1.0.1 pl
+==============
+- Fixed "ERR: Wrong HASH" when customer returns to site without payment.
+
 1.0.0 pl
 ==============
 - Added method getPaymentLink(msOrder $order); for placeholder [[+payment_link]] in MS2 letters.
