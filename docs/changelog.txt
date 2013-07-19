@@ -1,5 +1,9 @@
 Changelog for mspZPayment.
 
+1.0.2 pl
+==============
+- Fixed prerequest bug
+
 1.0.1 pl
 ==============
 - Fixed "ERR: Wrong HASH" when customer returns to site without payment.
