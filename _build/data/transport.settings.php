@@ -9,33 +9,31 @@ $settings = array();
 
 $tmp = array(
 	'url' => array(
-		'xtype' => 'textfield'
-		,'value' => 'https://z-payment.com/merchant.php'
-	)
-	,'shopid' => array(
-		'xtype' => 'textfield'
-		,'value' => '0000'
-	)
-	,'key' => array(
-		'xtype' => 'text-password'
-		,'value' => 'mypassword'
+		'xtype' => 'textfield',
+		'value' => 'https://z-payment.com/merchant.php',
+	),
+	'shopid' => array(
+		'xtype' => 'textfield',
+		'value' => '0000',
+	),
+	'key' => array(
+		'xtype' => 'text-password',
+		'value' => 'mypassword',
 
-	)
-	,'sign' => array(
-		'xtype' => 'text-password'
-		,'value' => ''
+	),
+	'sign' => array(
+		'xtype' => 'text-password',
+		'value' => '',
+	),
+	'success_id' => array(
+		'xtype' => 'numberfield',
+		'value' => 0,
 
-	)
-	,'success_id' => array(
-		'xtype' => 'numberfield'
-		,'value' => 0
-
-	)
-	,'failure_id' => array(
-		'xtype' => 'numberfield'
-		,'value' => 0
-
-	)
+	),
+	'failure_id' => array(
+		'xtype' => 'numberfield',
+		'value' => 0,
+	),
 
 );
 
@@ -44,9 +42,9 @@ foreach ($tmp as $k => $v) {
 	$setting = $modx->newObject('modSystemSetting');
 	$setting->fromArray(array_merge(
 		array(
-			'key' => 'ms2_payment_zp_'.$k
-			,'namespace' => 'minishop2'
-			,'area' => 'ms2_payment'
+			'key' => 'ms2_payment_zp_'.$k,
+			'namespace' => 'minishop2',
+			'area' => 'ms2_payment',
 		), $v
 	),'',true,true);
 
