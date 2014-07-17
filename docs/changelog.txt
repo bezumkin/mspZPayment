@@ -1,5 +1,10 @@
 Changelog for mspZPayment.
 
+1.0.3 pl
+==============
+- Fixed error level in payment connector.
+- Fixed english lexicon.
+
 1.0.2 pl
 ==============
 - Fixed prerequest bug
