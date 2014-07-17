@@ -1,6 +1,6 @@
 <?php
 
-$_lang['setting_ms2_payment_ms2_payment_zp_url'] = 'Api url';
+$_lang['setting_ms2_payment_zp_url'] = 'Api url';
 $_lang['setting_ms2_payment_zp_url_desc'] = 'Address to send requests to the remote service Z-Payment';
 
 $_lang['setting_ms2_payment_zp_shopid'] = 'Shop id';
